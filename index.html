@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <title>Blossom Collector</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Blossom Collector  <span><img src="./img/th.jpg" alt="flower" height="30" width="30"></span></h1>
+        <section class="section">
+            <div class="divsec">
+                <button id="flwbtn"> <img src="./img/th.jpg" alt="flower" height="150" width="150" ></button>
+                <p>Harvest a Flower!</p>
+                <p>You’ve collected</p>
+                <div id="nOf">0</div>
+                <p>Your flower production rate:</p>
+                <div id="fPs">0</div>
+            </div>
+            <div class="divsec">
+                <div id="flowerContainer"></div>
+            </div>
+            <div class="divsec">
+                <button id="upgbtn" >Boost</button>
+                <p id="alertU"></p>
+                <p class="pH">Craft Your Blossom Plan</p>
+                <button id="tenbtn" class="btn">Boost by 10 Flowers </button>
+                <p class="p">Blossom Boost: Cultivate  <span class="n">10</span>  Flowers! <img src="./img/floicon.png" alt="flower" height="30" width="30"></p>
+                <button id="hunbtn" class="btn">Boost by 100 Flowers</button>
+                <p class="p">Blossom Boost: Cultivate  <span class="n">100</span>  Flowers! <img src="./img/floicon.png" alt="flower" height="30" width="30"></p>
+                <button id="thbtn" class="btn">Boost by 1000 Flowers</button>
+                <p class="p">Blossom Boost: Cultivate  <span class="n">1000</span> Flowers! <img src="./img/floicon.png" alt="flower" height="30" width="30"></p>
+                <button id="tenthbtn" class="btn">Boost by 10000 Flowers</button>
+                <p class="p">Blossom Boost: Cultivate  <span class="n">10000</span> Flowers! <img src="./img/floicon.png" alt="flower" height="30" width="30"></p>
+            </div>
+        </section>
+        <audio id="flowerSound" src="./audio/pick.mp3"></audio>
+<audio id="upgradeSound" src="./audio/nuture.mp3"></audio>
+    </div>
+    <footer>© 2024 Blossom Collector Game. All rights to the flowers reserved</footer>
+</body>
+</html>
