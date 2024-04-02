@@ -15,10 +15,10 @@
 
 @keyframes vibrateAnimation {
   from {
-      transform: translateX(-2px); /* Adjust the amount of translation */
+      transform: translateX(-2px); 
   }
   to {
-      transform: translateX(2px); /* Adjust the amount of translation */
+      transform: translateX(2px); 
   }
 }
   
