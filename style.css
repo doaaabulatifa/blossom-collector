@@ -9,6 +9,19 @@
   
   }
   
+.vibrate {
+  animation: vibrateAnimation 0.1s linear infinite alternate;
+}
+
+@keyframes vibrateAnimation {
+  from {
+      transform: translateX(-2px); /* Adjust the amount of translation */
+  }
+  to {
+      transform: translateX(2px); /* Adjust the amount of translation */
+  }
+}
+  
   img {
     object-fit: cover;
   }

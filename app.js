@@ -15,6 +15,13 @@ const tenCounterBox = document.getElementById("tenCounter");
 const hunCounterBox = document.getElementById("huncounter"); 
 const thCounterBox = document.getElementById("thcounter"); 
 const tenthCounterBox = document.getElementById("tenthcounter"); 
+function vibrateButton() {
+    flowerbtn.classList.add("vibrate"); 
+    setTimeout(function () {
+        flowerbtn.classList.remove("vibrate"); 
+    }, 300);
+}
+
 
 const upgradeButtons = [tenUp, hunUp, thUp, tenthUp];
 function disableUpgradeButtons() {
@@ -58,6 +65,8 @@ function pickFlowers() {
     updatePage();
     updateStorage();
     addFlower();
+    
+    createSmallFlowers(); 
 }
 function addFlower() {
     var flowerImage = document.createElement("img");
@@ -110,9 +119,40 @@ if (storageFlower !== null) {
     flowerObj.counterUpTenth=storageFlower.counterUpTenth;
     
 }
+function createSmallFlowers() {
+    const numSmallFlowers = 8;
+    for (let i = 0; i < numSmallFlowers; i++) {
+        const smallFlower = document.createElement("img");
+        smallFlower.src = "./img/th.jpg";
+        smallFlower.width = 30; 
+        smallFlower.height = 30; 
+        smallFlower.alt = "flowers";
+        smallFlower.classList.add("smallFlower");
+        const randomX = Math.random() * 100 - 50;
+        const randomY = Math.random() * 100 - 50;
+        smallFlower.style.position = "absolute";
+        smallFlower.style.left = `${10 + randomX}%`;
+        smallFlower.style.top = `${10 + randomY}%`;
+
+        container.appendChild(smallFlower); 
+
+        setTimeout(() => {
+            smallFlower.style.transition = "transform 0.5s linear";
+            smallFlower.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            smallFlower.style.opacity = 1; 
+        }, 10);
+
+        setTimeout(() => {
+            container.removeChild(smallFlower);
+        }, 500);
+    }
+}
 
 
-flowerbtn.addEventListener("click", pickFlowers);
+flowerbtn.addEventListener("click", function () {
+    pickFlowers(); // Call existing function
+    vibrateButton(); // Call the function for vibration effect
+});
 oneUp.addEventListener("click", oneUpgrade);
 tenUp.addEventListener("click", tenUpgrade);
 hunUp.addEventListener("click", hunUpgrade);
