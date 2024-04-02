@@ -38,7 +38,7 @@
     font-size: 25px;
     font-weight: bold;
   }
-  #upgbtn {
+  #upgbtn, #rest{
     background-color: #4caf50;
     border: none;
     color: white;
@@ -69,6 +69,22 @@
     font-weight: bold;
     background-color: #af7c57;
     width: fit-content;
+  }
+  #tenCounter,#huncounter,#thcounter,#tenthcounter{
+    border: thick 5px rgb(54, 38, 3);
+    border-radius: 50%;
+    color: rgb(6, 88, 11);
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    align-items: center;
+    padding: 2px;
+    margin: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #af7c57;
+    width: fit-content;
+
   }
   .btn{
     border: solid 2px;
